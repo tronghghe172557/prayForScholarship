@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <audio id="myAudio">
+        <source src="./2.mp4" type="audio/mpeg">
+      </audio>
+
+    <!-- // học bổng -->
+    <div class="hide snowflakes" aria-hidden="true">
+        <div class="snowflake">Học bổng</div>
+        <div class="snowflake">Học bổng</div>
+        <div class="snowflake">Học bổng</div>
+        <div class="snowflake">Học bổng</div>
+        <div class="snowflake">Học bổng</div>
+        <div class="snowflake">Học bổng</div>
+        <div class="snowflake">Học bổng</div>
+        <div class="snowflake">Học bổng</div>
+        <div class="snowflake">Học bổng</div>
+        <div class="snowflake">Học bổng</div>
+        <div class="snowflake">Học bổng</div>
+        <div class="snowflake">Học bổng</div>
+        <div class="snowflake">Học bổng</div>
+        <div class="snowflake">Học bổng</div>
+        <div class="snowflake">Học bổng</div>
+        <div class="snowflake">Học bổng</div>
+    </div>
+    <div class="nhang hide">
+        <img src="./Screenshot_1-PhotoRoom.png-PhotoRoom.png" alt="">
+    </div>
+    <div class="anh">
+        <img src="./hang hai.png" alt="">
+    </div>
+    <hr>
+    <div class="promise">
+        <textarea name="promise" id="promise" cols="30" rows="5" placeholder="Nhập nguyện vọng của bạn"></textarea>
+    </div>
+    <!-- pháo hoa -->
+    <!-- thắp hương -->
+    <div class="pyro hide">
+        <div class="before"></div>
+        <div class="after"></div>
+    </div>
+    <button>
+        Thắp hương
+    </button>
+
+    <!--  -->
+    <!--  -->
+    <div class="modal hide">
+        <div class="modal__inner">
+            <div class="modal__header">
+                <p>Cầu chúc cho bé iuuuuu may mắn</p>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+
+            <div class="modal__body">
+                <h2></h2>
+                <p>Chắc chắn bé iuuu sẽ được thôi anh tin bé mà</p>
+            </div>
+            <div class="modal__footer">
+                <button>close</button>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+
+    <script>
+        var audio = document.getElementById('myAudio');
+        var snowflakes = document.querySelector('.snowflakes')
+        var promise = document.querySelector('.promise textArea')
+        var phaoHoa = document.querySelector('.pyro')
+        var nhang = document.querySelector('.nhang')
+        var button = document.querySelector('button')
+            //
+        var modal = document.querySelector('.modal')
+        var btnClose = document.querySelector('.modal__footer button')
+        console.log([modal])
+        console.log(button)
+
+        button.addEventListener('click', function() {
+            snowflakes.classList.remove('hide')
+            phaoHoa.classList.remove('hide')
+            nhang.classList.remove('hide')
+            modal.classList.toggle('hide');
+            //
+            var h2 = document.querySelector('.modal__body h2')
+            h2.innerHTML += promise.value;
+            console.log(promise.value)
+                //
+            btnClose.addEventListener('click', function() {
+                modal.classList.add('hide');
+                //
+                audio.play();
+            });
+        })
+    </script>
+
+</body>
+
+</html>
